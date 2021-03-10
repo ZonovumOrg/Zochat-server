@@ -25,7 +25,10 @@ SERVER = socket(
 
 SERVER.bind(ADDR)
 
-messages_app = messages.messages(server=SERVER, clients={}, adresses={}, bufsiz=BUFSIZ)
+messages_app = messages.messages(server=SERVER,
+                                 clients={},
+                                 adresses={},
+                                 bufsiz=BUFSIZ)
 
 if __name__ == "__main__":
     logging.info('En attente de connexion...')
